@@ -60,3 +60,44 @@ var personOne = {
 }
 
 console.log(user(personOne));
+
+
+fruits  = ["fruits", "bananna"]
+console.log("fruits array--->"); 
+console.log(fruits)
+fruits.forEach(function(item, index, array){
+    console.log(item, index)
+});
+
+var last = fruits.pop();
+console.log("last item", last)
+var last_added = fruits.push("Strawbery")
+console.log(last_added)
+console.log(fruits)
+
+fruits.shift()
+console.log(fruits)
+
+fruits.unshift("Pear")
+
+fruits.push("orange")
+console.log(fruits.length)
+
+fruits.unshift("Kiwi")
+
+console.log(fruits)
+
+var firstHalf = fruits.splice(0,2)
+console.log(firstHalf)
+
+console.log(fruits)
+
+// making shallow copy
+var shallowCopy = fruits.slice()
+console.log(shallowCopy)
+
+var fs = require('fs')
+fs.writeFile('message.txt', 'Hello World',function (err){
+    if (err) throw err
+    console.log("Writing Done!")
+})
