@@ -101,3 +101,26 @@ fs.writeFile('message.txt', 'Hello World',function (err){
     if (err) throw err
     console.log("Writing Done!")
 })
+
+// callback example
+var mainFunction = function (callBack){
+    var someData = "Here is some data"
+    callBack(someData)
+}
+//Anonymous Function inside mainFunction
+mainFunction(function(data){
+    console.log(data)
+});
+
+
+// Hello World Server with Node.js
+var http = require('http')
+debugger;
+http.createServer(function (req,res) {
+    res.writeHead(200, {
+        'Content-Type': 'text/plain',
+    });
+    debugger;
+    res.end('Hello Wrold \n');
+}).listen(1337, '127.0.0.1');
+console.log('Server running at http://127.0.0.1:1337/');
