@@ -115,12 +115,19 @@ mainFunction(function(data){
 
 // Hello World Server with Node.js
 var http = require('http')
-debugger;
 http.createServer(function (req,res) {
     res.writeHead(200, {
         'Content-Type': 'text/plain',
     });
-    debugger;
     res.end('Hello Wrold \n');
-}).listen(1337, '127.0.0.1');
-console.log('Server running at http://127.0.0.1:1337/');
+}).listen(1336, '127.0.0.1');
+console.log('Server running at http://127.0.0.1:1336/');
+
+
+// Fat arrow ES6 
+// ES5 
+var multiply = function (x, y){
+    return x * y;
+}
+// ES6 
+var multiply1 = (x,y) => (x * y);
